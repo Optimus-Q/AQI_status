@@ -11,12 +11,13 @@ aqi_df = cleandata(aqi_df)
 # list all countries from df
 countries_list = aqi_df["Country"].unique().tolist()
 
-# dropdown menu
-countries_dropdown = st.selectbox("Select the country name", countries_list)
-
 # streamlit - ui
 st.title("AQI Status")
 st.markdown("Select the country name to view the AQI values")
+
+# dropdown menu
+countries_dropdown = st.selectbox("Select the country name", countries_list)
+
 st.write(f"Selected country is: {countries_dropdown}")
 
 # analytics
